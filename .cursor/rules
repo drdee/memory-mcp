@@ -1,0 +1,84 @@
+# Cursor Rules for Python 3.13 Projects
+
+## Python Version and Environment
+- Use Python 3.13+ features where appropriate
+- Utilize uv for dependency management
+- Always pin exact package versions in requirements files
+- Use virtual environments for all development
+
+## Type Annotations and Type Safety
+- Add complete type annotations to all functions and methods
+- Use the `typing` module and modern typing features (e.g., `TypedDict`, `Protocol`, Union types with `|`)
+- Leverage structural typing with `Protocol` when appropriate
+- Validate type correctness with mypy in strict mode
+- Use `Annotated` for metadata on types when needed
+
+## Code Structure and Organization
+- Follow PEP 8 guidelines for code formatting
+- Use black for consistent code formatting
+- Organize code into logical modules and packages
+- Keep functions and methods focused and short (aim for < 30 lines)
+- Use docstrings for all modules, classes, methods, and functions
+- Prefer composition over inheritance where possible
+
+## Modern Python Patterns
+- Use dataclasses or Pydantic models for data containers
+- Utilize context managers (`with` statements) for resource management
+- Leverage async/await syntax for asynchronous operations
+- Use pathlib for file system operations instead of os.path
+- Prefer list/dict comprehensions over loops for simple transformations
+- Use generator expressions for large data processing
+
+## Error Handling
+- Use specific exception types rather than catching Exception
+- Create custom exception classes for application-specific errors
+- Add context to exceptions with Python 3.11+ exception groups when appropriate
+- Handle exceptions at the appropriate level of abstraction
+- Use try/except/else/finally blocks appropriately
+
+## Dependency Management
+- Use uv for installing and managing dependencies
+- Maintain requirements.txt or pyproject.toml with specific versions
+- Regularly update dependencies for security and features
+- Use optional dependency groups for development/testing requirements
+- Document why each dependency is needed in comments
+
+## Testing and Quality Assurance
+- Write pytest-based tests for all functionality
+- Aim for 90%+ code coverage
+- Use fixtures and parametrization in tests
+- Include integration tests alongside unit tests
+- Use property-based testing for complex algorithms
+- Add type checking to CI pipeline
+
+## Performance Considerations
+- Profile code before optimizing
+- Use appropriate data structures for operations
+- Consider memory usage for large data operations
+- Use generator expressions for processing large datasets
+- Leverage multi-processing for CPU-bound tasks
+- Use asyncio for I/O-bound operations
+
+## Security Best Practices
+- Never hardcode secrets in source code
+- Use environment variables or secure vaults for secrets
+- Sanitize all user inputs
+- Use parameterized queries for database operations
+- Keep dependencies updated to avoid security vulnerabilities
+- Document security considerations in comments
+
+## Documentation
+- Use Google-style or NumPy-style docstrings consistently
+- Include type information in docstrings (in addition to annotations)
+- Document exceptions that may be raised
+- Add examples in docstrings for complex functions
+- Keep documentation updated with code changes
+- Generate API documentation automatically
+
+## Project Structure
+- Use a standardized project structure
+- Include setup.py or pyproject.toml configuration
+- Maintain a comprehensive README.md
+- Add a CHANGELOG.md to track changes
+- Include contribution guidelines in CONTRIBUTING.md
+- Create a standard directory structure (src/, tests/, docs/) 
