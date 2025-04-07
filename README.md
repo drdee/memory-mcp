@@ -1,8 +1,17 @@
 # Memory MCP
+[![smithery badge](https://smithery.ai/badge/@drdee/memory-mcp)](https://smithery.ai/server/@drdee/memory-mcp)
 
 A Model Context Protocol server for storing and retrieving memories using low-level Server implementation and SQLite storage.
 
 ## Installation
+
+### Installing via Smithery
+
+To install Memory MCP for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@drdee/memory-mcp):
+
+```bash
+npx -y @smithery/cli install @drdee/memory-mcp --client claude
+```
 
 This project uses [uv](https://github.com/astral-sh/uv) for dependency management instead of pip. uv is a fast, reliable Python package installer and resolver.
 
